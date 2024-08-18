@@ -1,8 +1,17 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import NavigationBar from "@/components/navigationbar";
+import { Toaster } from "react-hot-toast";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +25,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Righteous&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <NavigationBar />
+        {children}
+        <Toaster position="top-right" reverseOrder={false} />
+        <Footer />
+      </body>
     </html>
   );
 }
