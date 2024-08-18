@@ -2,14 +2,30 @@
 
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa6";
-import Photo from "../../Assets/Photo.gif";
+import Photo from "../../Assets/photo.png";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import BlurFade from "@/components/magicui/blur-fade";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function About() {
+  const resumeUrl =
+    "https://drive.google.com/file/d/1DU-_LGRreO-B-DFBBg-gAPK2qbztWkxJ/view?usp=sharing";
+
   const handleDownloadClick = () => {
+    // Create a link element and trigger a download
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "resume.pdf"; // Provide a default name for the downloaded file
+    document.body.appendChild(link); // Append the link to the body
+    link.click();
+    document.body.removeChild(link); // Remove the link from the body
+
     toast.success("Download started!");
+  };
+
+  const handleViewClick = () => {
+    // Open the resume URL in a new tab
+    window.open(resumeUrl, "_blank");
   };
 
   return (
@@ -54,7 +70,7 @@ export default function About() {
           </div>
           <div className="w-full border p-4 rounded-md flex-row flex justify-between">
             <div className="flex justify-between gap-2 items-center">
-              View Resume <FaExternalLinkSquareAlt />
+              View Resume <FaExternalLinkSquareAlt onClick={handleViewClick} />
             </div>
             <div
               className="flex items-center cursor-pointer"

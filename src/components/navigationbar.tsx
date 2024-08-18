@@ -4,14 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import ThemeToggleButton from "./themeToggle";
 import { Drawer, DrawerContent } from "@/components/ui/drawer";
-import {
-  FaFontAwesomeLogoFull,
-  FaGit,
-  FaHamburger,
-  FaHome,
-  FaInstagram,
-  FaProductHunt,
-} from "react-icons/fa";
+import logo from "../app/Assets/logo.svg";
 import { FaLinesLeaning } from "react-icons/fa6";
 import {
   Building2,
@@ -38,7 +31,7 @@ export default function NavigationBar() {
       <div>
         {" "}
         <Link href="/">
-          <Gitlab fontSize="58px" />
+          <Gitlab fontSize="78px" />
         </Link>
       </div>
       <div className="hidden sm:flex flex-row justify-between gap-10 items-center">

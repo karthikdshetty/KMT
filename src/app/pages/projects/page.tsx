@@ -51,7 +51,7 @@ export default function Projects() {
                 {projects.map((project, index) => (
                   <div
                     key={index}
-                    className="dark:bg-slate-600 bg-slate-400 rounded-lg shadow-lg p-6 "
+                    className="dark:bg-gray-600 bg-gray-200 rounded-lg shadow-lg p-6 "
                   >
                     <div className="flex flex-row justify-left items-center gap-3 mb-4">
                       {/* <Image
