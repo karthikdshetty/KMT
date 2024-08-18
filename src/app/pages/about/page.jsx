@@ -32,7 +32,7 @@ export default function About() {
             <br />
             In my current role at Ordrio Technologies Private Limited, I
             collaborate with a cross-functional team to develop and maintain web
-            applications. I handle the full software development lifecycle and
+            applications. I handle the full software development lifecycle &
             focus on creating responsive, user-friendly UI components. My key
             projects include Ordrio Saas Panel, Cree8 Construction, and Aura.
             <br />
