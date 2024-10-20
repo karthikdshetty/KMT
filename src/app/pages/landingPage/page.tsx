@@ -27,7 +27,7 @@ export default function LandingPage() {
       label: "LinkedIn",
     },
     {
-      href: "mailto:shettydineshkarthik@gmail.com",
+      href: "mailto:karthik.shetty.dev@gmail.com",
       icon: Mail,
       label: "Email",
     },
