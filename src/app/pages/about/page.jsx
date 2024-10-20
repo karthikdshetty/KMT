@@ -9,7 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function About() {
   const resumeUrl =
-    "https://drive.google.com/file/d/1DU-_LGRreO-B-DFBBg-gAPK2qbztWkxJ/view?usp=sharing";
+    "https://drive.google.com/file/d/1wsJ7JetWX7LDA0wN-WAHgFg7K_9GPduj/view?usp=sharing";
 
   const handleDownloadClick = () => {
     // Create a link element and trigger a download
